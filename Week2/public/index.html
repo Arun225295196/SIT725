@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIT725 Task 2.2P - Calculator</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🧮 SIT725 Calculator</h1>
+            <p>Task 2.2P - Express Web Server</p>
+        </header>
+
+        <main>
+            <!-- Calculator Interface -->
+            <div class="calculator-section" >
+                <h2>Calculator Interface</h2>
+                <div class="calculator">
+                    <div class="input-group">
+                        <input type="number" id="num1" placeholder="Enter first number" step="any">
+                        <select id="operation">
+                            <option value="add">+</option>
+                            <option value="subtract">-</option>
+                            <option value="multiply">×</option>
+                            <option value="divide">÷</option>
+                        </select>
+                        <input type="number" id="num2" placeholder="Enter second number" step="any">
+                        <button onclick="calculate()">Calculate</button>
+                    </div>
+                    <div class="result" id="result"></div>
+                </div>
+            </div>
+
+            <!-- API Testing Section -->
+            <div class="api-section">
+                <h2>API Testing</h2>
+                <p>Test the REST API endpoints directly:</p>
+                
+                <div class="api-examples">
+                    <h3>GET Endpoints (click to test):</h3>
+                    <div class="endpoint-group">
+                        <button onclick="testEndpoint('/add?num1=5&num2=3')">
+                            GET /add?num1=5&num2=3
+                        </button>
+                        <button onclick="testEndpoint('/subtract?num1=10&num2=4')">
+                            GET /subtract?num1=10&num2=4
+                        </button>
+                        <button onclick="testEndpoint('/multiply?num1=6&num2=7')">
+                            GET /multiply?num1=6&num2=7
+                        </button>
+                        <button onclick="testEndpoint('/divide?num1=15&num2=3')">
+                            GET /divide?num1=15&num2=3
+                        </button>
+                        <button onclick="testEndpoint('/api')">
+                            GET /api (Show all endpoints)
+                        </button>
+                    </div>
+                </div>
+
+                <div class="api-result">
+                    <h3>API Response:</h3>
+                    <pre id="apiResult">Click any endpoint button above to test the API</pre>
+                </div>
+            </div>
+
+            <!-- POST API Testing -->
+            <div class="post-section">
+                <h2>POST API Testing</h2>
+                <div class="post-form">
+                    <input type="number" id="postNum1" placeholder="Number 1" step="any">
+                    <select id="postOperation">
+                        <option value="add">Add</option>
+                        <option value="subtract">Subtract</option>
+                        <option value="multiply">Multiply</option>
+                        <option value="divide">Divide</option>
+                    </select>
+                    <input type="number" id="postNum2" placeholder="Number 2" step="any">
+                    <button onclick="testPostEndpoint()">Send POST Request</button>
+                </div>
+                <div class="post-result">
+                    <h3>POST Response:</h3>
+                    <pre id="postResult">Use the form above to test POST /calculate endpoint</pre>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="info-section">
+                <h2>📚 Learning Notes</h2>
+                <div class="learning-notes">
+                    <h3>What we've implemented:</h3>
+                    <ul>
+                        <li><strong>Express.js Server:</strong> Basic web server with static file serving</li>
+                        <li><strong>REST API:</strong> GET endpoints for calculator operations</li>
+                        <li><strong>Query Parameters:</strong> Using req.query to get URL parameters</li>
+                        <li><strong>POST Endpoints:</strong> Accepting JSON data in request body</li>
+                        <li><strong>Error Handling:</strong> Validating input and handling errors</li>
+                        <li><strong>Static Files:</strong> Serving HTML, CSS, and JavaScript files</li>
+                    </ul>
+                    
+                    <h3>Key Express Concepts:</h3>
+                    <ul>
+                        <li><strong>Middleware:</strong> express.static() and express.json()</li>
+                        <li><strong>Routing:</strong> app.get(), app.post()</li>
+                        <li><strong>Request/Response:</strong> req.query, req.body, res.json()</li>
+                        <li><strong>HTTP Status Codes:</strong> 200, 400, 404, 500</li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

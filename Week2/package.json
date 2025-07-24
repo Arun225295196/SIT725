@@ -1,0 +1,32 @@
+{
+  "name": "sit725-task-2.2p",
+  "version": "1.0.0",
+  "description": "SIT725 Task 2.2P - Express Web Server with Calculator API",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "test": "echo \"No tests specified yet\" && exit 0"
+  },
+  "keywords": [
+    "express",
+    "nodejs",
+    "calculator",
+    "rest-api",
+    "web-server",
+    "sit725"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Arun225295196/SIT725"
+  }
+}
