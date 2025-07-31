@@ -1,0 +1,22 @@
+{
+  "name": "sit725-week3-prac",
+  "version": "1.0.0",
+  "description": "SIT 725 Week 3 Practical - Express App with Materialize",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "Nodejs",
+    "Express",
+    "Materialize",
+    "HTML",
+    "JS",
+    "CSS"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

@@ -1,0 +1,70 @@
+.navbar-size {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.user-image-size {
+    height: 56px;
+    margin: 4px 0;
+}
+
+.main-body {
+    background-color: #F28487;
+    color: white;
+    min-height: calc(100vh - 64px);
+    padding-bottom: 20px;
+}
+
+.materialboxed-image {
+    margin: 0 auto;
+    height: 400px;
+    max-width: 100%;
+}
+
+.click-me-button {
+    background-color: #EE6E73;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.click-me-button:hover {
+    background-color: #EC5B61;
+}
+
+.card {
+    margin: 20px 0;
+}
+
+.card-text {
+    color: #424242;
+}
+
+.modal {
+    color: #424242;
+}
+
+/* Responsive design improvements */
+@media only screen and (max-width: 992px) {
+    .materialboxed-image {
+        height: 300px;
+    }
+    
+    .col.s4 {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .materialboxed-image {
+        height: 200px;
+    }
+    
+    .navbar-size {
+        width: 100%;
+        padding: 0 10px;
+    }
+    
+    .col.s4 {
+        width: 100%;
+    }
+}
