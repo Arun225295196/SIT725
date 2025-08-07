@@ -92,25 +92,22 @@ const addCards = (items) => {
     });
 }
 
-// Document ready function
 $(document).ready(function(){
-    // Initialize Materialize components
     $('.materialboxed').materialbox();
+    $('#formSubmit').click(()=>{
+    submitForm();
+    })
+    getProjects();
     $('.modal').modal();
-    
-    // Event handlers - Click Me button shows alert (as in workshop)
-    $('#clickMeButton').click(() => {
-        clickMe();
     });
     
-    // Form submit handler
-    $('#formSubmit').click(() => {
-        submitForm();
-    });
+
+
+const getProjects = () => {
+    $.get('/api/projects',(response) => {
+    if(response.statusCode==200){
+    addCards(response.data);
+    }
+    })
+    }
     
-    // Add dynamic cards
-    addCards(cardList);
-    
-    console.log("SIT 725 Week 4 App initialized successfully!");
-    console.log("Added " + cardList.length + " dynamic cards");
-});
