@@ -1,0 +1,30 @@
+{
+  "name": "calculator-app-testing",
+  "version": "1.0.0",
+  "description": "SIT725 6.2D Testing Assignment - Calculator App with Mocha/Chai Tests",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "mocha --reporter spec",
+    "dev": "nodemon server.js"
+  },
+  "keywords": [
+    "express",
+    "calculator",
+    "testing",
+    "mocha",
+    "chai",
+    "sit725"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "mocha": "^10.2.0",
+    "chai": "^4.3.7",
+    "request": "^2.88.2",
+    "nodemon": "^3.0.1"
+  }
+}
